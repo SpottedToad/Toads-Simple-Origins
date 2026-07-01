@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.spottedtoad.toads_simple_origins.item.custom.FishBowlArmorItem;
 
 import static net.minecraft.item.Items.DRIED_KELP;
 import static net.minecraft.item.Items.LEATHER_HORSE_ARMOR;
@@ -20,7 +21,7 @@ public class ModItems {
             new Item(new Item.Settings().food(ModFoodComponents.COOKED_MISERABLE_CREATURE)));
 
     public static final Item FISH_BOWL = registerItem("fish_bowl",
-            new ArmorItem(ModArmorMaterials.GLASS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new FishBowlArmorItem(ModArmorMaterials.GLASS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(12))));
     public static final Item REINFORCED_FISH_BOWL = registerItem("reinforced_fish_bowl",
             new ArmorItem(ModArmorMaterials.GLASS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()

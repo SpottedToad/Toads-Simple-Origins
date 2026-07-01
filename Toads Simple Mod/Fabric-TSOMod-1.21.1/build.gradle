@@ -9,14 +9,8 @@ group = project.maven_group
 
 repositories {
 	mavenCentral()
-	maven { url = "https://maven.fabricmc.net/" }
-	maven{
-		name='GeckoLib'
-		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven'
-		content{
-			includeGroup("software.bernie.geckolib")
-		}
-	}
+	maven{ url = "https://maven.fabricmc.net/" }
+	maven{url = "https://maven.azuredoom.com/mods"}
 }
 
 fabricApi {
@@ -31,7 +25,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
+	modImplementation("mod.azure.azurelib:azurelib-fabric-${minecraft_version}:${azurelib_version}")
 }
 
 processResources {
